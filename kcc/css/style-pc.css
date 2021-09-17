@@ -25,12 +25,11 @@ body {
   font-size: 14px;
   letter-spacing: -0.03em;
   color: #000;
-  background: #ffffff url("../img/main-visual-01.jpg") 0 0 no-repeat;
 }
 
 #wrapper {}
 
-#skip-nav {
+.skip-nav {
   position: fixed;
   left: 0;
   top: -40px;
@@ -44,149 +43,11 @@ body {
   transition: top .3s;
 }
 
-#skip-nav:focus {
+.skip-nav:focus {
   top: 0;
 }
 
-/* HEADER */
-#header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 9;
-  color: #fff;
-}
 
-#header.white {
-  color: #000;
-  background-color: #fff;
-}
-
-#header.white h1 a img:first-child {
-  opacity: 0;
-}
-
-#header.white h1 a img + img {
-  opacity: 1;
-}
-
-#header.white #top-menu > li + li::before {
-  color: #000;
-}
-
-#header.white #top-menu > li.box a {
-  border-color: #000;
-}
-
-#header.open {
-
-}
-
-#header.open::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  height: 100px;
-  background-color: #e0e0e0;
-}
-
-#header h1 {
-  position: absolute;
-  left: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#header h1 a {
-  display: block;
-}
-
-#header h1 a img:first-child {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-#header h1 a img + img {
-  opacity: 0;
-}
-
-/* NAV */
-#gnb {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-#gnb > ul > li {
-  float: left;
-}
-
-#gnb > ul > li + li {
-  margin-left: 40px;
-}
-
-#gnb > ul > li > a {
-  display: block;
-  line-height: 100px;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-#gnb > ul > li > ul {
-  position: absolute;
-  top: 140px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150%;
-  text-align: center;
-  font-size: 16px;
-  display: none;
-} 
-
-#gnb > ul > li > ul > li {
-  display: inline-block;
-} 
-
-#gnb > ul > li > ul > li + li {
-  margin-left: 40px;
-}
-
-#top-menu {
-  position: absolute;
-  top: 50%;
-  right: 50px;
-  transform: translateY(-50%);
-}
-
-#top-menu > li {
-  float: left;
-}
-
-#top-menu > li + li::before {
-  content: '|';
-  margin: 0 10px;
-  font-size: 10px;
-  color: #e0e0e0;
-  position: relative;
-  top: -2px;
-}
-
-#top-menu > li.box {
-  position: relative;
-  top: -3px;
-}
-
-#top-menu > li.box a {
-  display: inline-block;
-  padding: 3px 8px;
-  border: 1px solid #fff;
-}
 
 
 /* animation keyframes */

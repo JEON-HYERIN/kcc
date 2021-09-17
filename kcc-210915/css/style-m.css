@@ -1,0 +1,444 @@
+@charset "utf-8";
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle; max-width: 100%;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle; overflow: hidden;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+.pc {display: none !important;}
+br.only-pc {content: '';}
+br.only-pc::after {content: '\00a0';}
+
+
+/* common */
+body {
+  font-family: 'NanumSquare', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: -0.03em;
+  background: #ffffff;
+}
+
+#wrapper {
+  min-width: 320px;
+  max-width: 1024px;
+  /* max-width:850px */
+  margin: 0 auto;
+  overflow: hidden; 
+/*  overflow 모바일에서는 꼭써주기 */
+}
+
+#skip-nav {
+  position: fixed;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-size: 16px;
+  z-index: 100000;
+  transition: top 0.3s;
+}
+
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 9;
+}
+
+#header a.menu {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+}
+
+#header h1 {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  line-height: 1px;
+}
+
+#header h1 a {
+  display: block;
+}
+
+#header h1 a img:first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#header h1 a img +i mg {
+  opacity: 0;
+}
+
+#header.white {
+  color: #000000;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#header.white h1 a img:first-child {
+  opacity: 0;
+}
+
+#header.white h1 a img+img {
+  opacity: 1;
+}
+
+#header a.menu {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+}
+
+#header.white a.menu h1 a img:first-child {
+  opacity: 0;
+}
+
+#header.white a.menu h1 a img+img {
+  opacity: 1;
+}
+
+
+
+#gnb {
+  display: none;
+}
+
+#top-menu {
+  display: none;
+}
+
+
+/* main */
+#main-visual {
+  height: 100vh;
+}
+
+#main-visual .image-slide {
+  background-color: yellow;
+  height: 100%;
+  position: relative;
+}
+
+#main-visual .image-slide ul.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lime;
+}
+
+#main-visual .image-slide ul.slide > li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/main-visual-01.jpg") no-repeat center/cover;
+  display: none; 
+}
+
+#main-visual .image-slide ul.slide > li.on {
+  display: block;
+}
+
+#main-visual .image-slide ul.slide > li:nth-child(2) {
+  background-image: url("../img/main-visual-02.jpg");
+}
+#main-visual .image-slide ul.slide > li:nth-child(3) {
+  background-image: url("../img/main-visual-03.jpg");
+}
+#main-visual .image-slide ul.slide > li:nth-child(4) {
+  background-image: url("../img/main-visual-04.jpg");
+}
+
+#main-visual .image-slide ul.slide > li p {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#main-visual .image-slide ul.slide > li p > * {
+  display: block;
+  opacity: 0;
+}
+
+#main-visual .image-slide ul.slide > li p span {
+  animation: show-up .5s ease 1s 1 normal forwards;
+}
+
+#main-visual .image-slide ul.slide > li p em {
+  font-size: 30px;
+  margin-top: 25px;
+  line-height: 1.3em;
+  animation: show-up .5s ease 1.5s 1 normal forwards;
+}
+
+#main-visual div.image-slide div.control {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(12, 76, 163, 0.9);
+  color: #ffffff;
+  font-size: 14px;
+}
+
+#main-visual div.image-slide div.control ul.title {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 16px;
+  color: #ffffff;
+}
+
+#main-visual div.image-slide div.control ul.title li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 240px;
+  display: none;
+}
+
+#main-visual div.image-slide div.control ul.title li.on {
+  display: block;
+}
+
+#main-visual div.image-slide div.control a.scroll {
+  display: none;
+}
+
+#main-visual div.image-slide div.control p.control {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#main-visual div.image-slide div.control p.control a.play {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+#main-visual div.image-slide div.control p.control a.play i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+#main-visual div.image-slide div.control p.control a.play i:first-child {
+  opacity: 1;
+}
+
+#main-visual div.image-slide div.control p.control a.play.on i:first-child {
+  opacity: 0;
+}
+
+#main-visual div.image-slide div.control p.control a.play.on i+i {
+  opacity: 1;
+}
+
+#main-visual div.image-slide div.control span.page {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: none;
+}
+
+@keyframes show-up {
+  0% {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translate(0, -5px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+body.main #main > section.white,
+body.main #main > section.gray {
+  padding: 60px 15px;
+}
+
+body.main #main > section.white {
+  background-color: #fff;
+}
+
+body.main #main > section.gray {
+  background-color: #f5f5f5;
+}
+
+body.main #main > section h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+body.main #main > section h2.sub {
+  margin-top: -20px;
+}
+
+body.main #main > section h2 + p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+ul.business-field {
+
+}
+
+ul.business-field::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+ul.business-field li {
+  float: left;
+  width: calc(50% - 5px);
+}
+
+ul.business-field li:nth-child(2n) {
+  margin-left: 10px;
+}
+
+ul.business-field li a {
+  display: block;
+  position: relative;
+}
+
+ul.business-field li a::before {
+  content: '';
+  position: absolute;
+  left: 100px;
+  top: -40px;
+  width: 108px;
+  height: 82px;
+  background:url("../img/icon-flag.png") no-repeat center/cover;
+  z-index: 9;
+  opacity: 0;
+  transition: all 350ms;
+}
+
+ul.business-field li a:hover::before {
+  left: -40px;
+  top: 100px;
+  opacity: 1;
+}
+
+ul.business-field li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 76, 163, 0.9);
+  opacity: 0;
+  transition: opacity 350ms;
+}
+
+ul.business-field li img {
+  width: 100%;
+}
+
+ul.business-field li a div.content {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 350ms;
+}
+
+ul.business-field li a:hover div.content,
+ul.business-field li a:hover::after {
+  opacity: 1;
+}
+
+ul.business-field li > em {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+/* animation keyframes */
+/*
+@keyframes show-up {
+  0% {transform: translate(0, 50px); opacity: 0;}
+  100% {transform: translate(0, 0); opacity: 1;}
+}
+@keyframes show-up2 {
+  0% {transform: translate(-50%, 50px); opacity: 0;}
+  100% {transform: translate(-50%, 0); opacity: 1;}
+}
+@keyframes btn-effect-right {
+  0% {transform: translate(0, 0);}
+  100% {transform: translate(5px, 0);}
+}
+
+#main-visual ul.slide li.on em {animation: show-up 1.5s ease-out 1s 1 normal forwards;}
+*/
+
