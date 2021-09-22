@@ -1,10 +1,16 @@
-// const header = document.querySelector('#header');
-// const mainMenu = header.querySelector('.main-menu');
+const header = document.querySelector('#header');
+const mainMenuLists = header.querySelectorAll('.main-menu li');
 
-// mainMenu.addEventListener('mouseenter', function () {
-//   header.classList.add('active');
-// });
+mainMenuLists.forEach(function(mainMenuList) {
+  mainMenuList.addEventListener('mouseenter', function () {
+    header.classList.add('active');
+  });
+});
+mainMenuLists.forEach(function(mainMenuList) {
+  mainMenuList.addEventListener('mouseleave', function () {
+    header.classList.remove('active');
+  });
+});
 
-// mainMenu.addEventListener('mouseleave', function () {
-//   header.classList.remove('active');
-// });
+
+
