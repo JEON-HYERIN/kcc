@@ -1,13 +1,10 @@
-// const header = document.querySelector('header#header');
-// const ulEl = header.querySelector('.main-menu li ul');
+// const header = document.querySelector('#header');
+// const mainMenu = header.querySelector('.main-menu');
 
-// ulEl.addEventListener('mouseenter', function (event) {
-//   ulEl.classList.remove('open');
-//   event.target.classList.add('open');
+// mainMenu.addEventListener('mouseenter', function () {
 //   header.classList.add('active');
 // });
 
-// header.addEventListener('mouseleave', function (event) {
-//   ulEl.classList.remove('open');
+// mainMenu.addEventListener('mouseleave', function () {
 //   header.classList.remove('active');
 // });
